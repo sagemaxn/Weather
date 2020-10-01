@@ -18,7 +18,7 @@ function Form() {
   useEffect(() => {
     const fetchData = async () => {
       const test = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${value}&appid=6cde39c070ab7fafab6d114e1b3f8cdc`
+        `https://api.openweathermap.org/data/2.5/weather?zip=${value}&appid=censored`
       );
 
       const json = await test.json();
