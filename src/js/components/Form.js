@@ -10,7 +10,7 @@ function Form() {
   const [locationData, setLocationData] = useState([]);
   const [temp, setTemp] = useState("");
   const [weather, setWeather] = useState("");
-  const [sunrise, setSunrise] = useState("")
+  const [sunrise, setSunrise] = useState("");
   const [sunset, setSunset] = useState("");
   const [state, setState] = useState("");
   const [humidity, setHumidity] = useState("");
@@ -24,12 +24,14 @@ function Form() {
       const json = await test.json();
 
       if (json.message) {
+        //json.message is what is recieved when an invalid url is entered
         alert("Please enter a valid US Zip-code and try again.");
         return;
       }
 
       setLocationData(json);
       setTemp(
+        //converts to Fahrenheit from Kelvin
         Math.round((((json.main.temp - 273.15) * 9) / 5 + 32) * 100) / 100
       );
       setWeather(json.weather[0].main);

@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "weather-finder",
     "public": "dist",
     "ignore": [
       "firebase.json",

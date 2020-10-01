@@ -50,7 +50,6 @@ input.submit {
 }
 
 .data {
-  /*  background-color: #157aa1; */
   display: grid;
   grid: 1fr 1fr / 1fr 1fr;
   width: 60%;
